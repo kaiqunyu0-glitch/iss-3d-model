@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#02010a" />
+  <title>國際太空站 3D 模型</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="./style.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="app">
+    <canvas id="c"></canvas>
+    <div id="loading" aria-live="polite">載入中…</div>
+    <header class="hud">
+      <h1>國際太空站 ISS</h1>
+      <p>單指旋轉・雙指縮放・點擊艙段看介紹</p>
+    </header>
+    <aside id="info" class="info" hidden>
+      <button type="button" id="info-close" aria-label="關閉介紹">×</button>
+      <h2 id="info-title"></h2>
+      <p id="info-meta"></p>
+      <p id="info-body"></p>
+    </aside>
+  </div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
